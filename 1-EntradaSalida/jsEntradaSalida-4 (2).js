@@ -8,5 +8,6 @@ var dato;
 dato = prompt ("Ingrese un dato");
 
 document.getElementById("elNombre").value = dato;
+
 }
 

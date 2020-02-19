@@ -3,17 +3,24 @@ function mostrar()
 
 	var contador=0;
 	var acumulador=0;
+	
 
-	while (contador <5){ //ingrese 5 veces
-		contador++
+	while (contador <5) { //ingrese 5 veces
+		
 		var numero = prompt ("Ingrese un numero.")
+		var numero = NaN;
 		numero = parseInt (numero);
 
-		acumulador += numero;
-		if (isNaN(numero)){
-			alert ("Error");
-			continue;
+		while (isNaN(numero))  {
+			contador++;
+			if (contador ==3){ 
+				break;
+			}
+			numero = prompt ("Error: ingrese un numero valido.");
+			numero = parseInt (numero);
 		}
+		contador++;
+		acumulador += numero;
 	}
 
 

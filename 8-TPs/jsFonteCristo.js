@@ -10,30 +10,34 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 var numero;
 function ComenzarIngreso () 
 {
- 
-}
-
-function NumerosPares ()
- {
-    var contador =0;
-    
     numero = document.getElementById("numero").value;
     numero = parseInt(numero)
 
-   while (isNaN(numero)|| numero <1) {
-       numero = prompt ("Ingrese un numero")
-       parseInt = parseInt(numero)
-   }
-
-   while (contador<numero) {
-       contador++;
-       console.log (contador)
-
-       if (contador % 2 == 0)
-       console.log (contador)
-   }
+    while (isNaN(numero)|| numero < 1)
+    {
+        numero = prompt ("Ingrese un numero valido")
+        numero= parseInt(numero)
+    }
     
-   
+}
+
+
+function NumerosPares ()
+ {
+    ComenzarIngreso (); // toda la funcion esta ahi 
+    var contador =0;
+    var contadorNumPares =0;
+    
+    
+    while (contador < numero)
+    {
+        contador++
+        console.log(contador)
+        //console.log (contador)
+        if (contador % 2== 0)
+        {
+            contadorNumPares++        }
+    }
     
     
  }
@@ -41,37 +45,39 @@ function NumerosPares ()
  function NumerosImpares () {
 
     var contador =0;
+     var contadorImpares=0;
     ComenzarIngreso (); //cargar un valor en la variable numero
-    
-    numero = document.getElementById("numero").value;
-    numero = parseInt(numero)
-
-   while (isNaN(numero)|| numero <1) {
-       numero = prompt ("Ingrese un numero")
-       parseInt = parseInt(numero)
-   }
 
    while (contador < numero) {
-       contador++;
+       contadors++;
        console.log (contador)
 
        if (contador % 2 !== 0)
-       console.log (contador)
-   }
-  }
+       {
+           contadorImpares++
+           console.log (contadorImpares)
+       }
+   
+
     
-   function NumerosDivisibles() {
+function NumerosDivisibles() 
+{
 
     var contador = 1;
     var contadorDivisibles =0;
     ComenzarIngreso();
 
-    while (contador <= 100) {
-        if (numero % contador == 0) {
+    while (contador <= 100)
+     {
+        if (numero % contador == 0) 
+        {
             contadorDivisibles++;
             console.log (contador)
         }
 
-    }
-   }
+    } console.log (contadorDivisibles)
+}
+
+function 
+//los 3 ultimos puntos 7 8 y 9
  
